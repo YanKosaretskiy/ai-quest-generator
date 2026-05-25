@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "AI Quest Generator",
+  "version": "1.8",
+  "description": "Бесконечный текстовый квест с генерацией сюжета и картинок через ИИ.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ai-quest-generator@temporary-addon"
+    }
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_area": "navbar"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*",
+    "https://*.pollinations.ai/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; img-src 'self' https://*.pollinations.ai data:;"
+  }
+}
